@@ -37,7 +37,7 @@ html * {
 }
 
 body {
-	background: #ffffff;
+	background-color: #ffffff;
 	color: #333333;
 	margin: 0 auto;
 	max-width: 960px;
@@ -48,7 +48,7 @@ body {
 }
 
 #grailsLogo {
-	background-color: #abbf78;
+	background-color: #000000;
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
@@ -73,7 +73,7 @@ a:hover, a:active {
 }
 
 h1 {
-	color: #48802c;
+	color: #00000;
 	font-weight: normal;
 	font-size: 1.25em;
 	margin: 0.8em 0 0.3em 0;
@@ -90,8 +90,19 @@ img {
 /* GENERAL */
 
 #grailsLogo a {
-	display: inline-block;
+	display: block;
 	margin: 1em;
+    vertical-align: middle;
+
+}
+#grailsLogo h1{
+    color: #ffffff;
+    text-align: center;
+    
+    position: relative;
+    bottom: 150px;
+    text-decoration: underline;
+    font-size: 3em;
 }
 
 .content {
@@ -108,7 +119,7 @@ img {
 }
 
 .footer {
-	background: #abbf78;
+	background: #000000;
 	color: #000;
 	clear: both;
 	font-size: 0.8em;
