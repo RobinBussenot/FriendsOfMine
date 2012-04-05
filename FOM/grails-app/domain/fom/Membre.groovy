@@ -1,24 +1,28 @@
 package fom
-import javax.persistence.*
 
-/*
+/**
  * Membre du reseau social 
+ * 
+ * @author Robin Bussenot (robinbussenot@gmail.com) & Vincent Carassus (vincentcarassus@gmail.com)
  */
-
 class Membre {
-
-    int id
-    String nom
-    String prenom
-    String email
-    Album album
-    //Classe d'association serait peut etre mieux
-    static hasMany=[friends:Membre]
     
+	String lastname
+    String firstname
+    String email
+    
+    static hasMany = [friends:Membre, albums:Album]
+	
+	public Membre(String lastname, String firstname, String email) {
+		super();
+		this.lastname = lastname;
+		this.firstname = firstname;
+		this.email = email;
+	}
     
     static constraints = {
-        nom blank:false
-        prenom blank:false
+        lastname blank:false, size: 3..30
+        firstname blank:false, size: 3..30
         email email:true,blank:false
     }
 }
