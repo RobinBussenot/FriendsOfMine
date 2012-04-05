@@ -25,4 +25,12 @@ class Membre {
         firstname blank:false, size: 3..30
         email email:true,blank:false
     }
+	
+	@Override
+	public boolean equals(Object other) {
+		if(other == null) return false
+		if(!(other instanceof Membre)) return false
+		Membre otherMembre = (Membre) other
+		this.id == otherMembre.id
+	}
 }

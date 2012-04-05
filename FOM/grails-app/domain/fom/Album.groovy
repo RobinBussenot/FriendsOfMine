@@ -10,6 +10,7 @@ package fom
  */
 class Album {
 	String name
+	Membre owner
 	
     static hasone = [owner:Membre]
     static hasMany = [photos:Photo]
@@ -18,4 +19,9 @@ class Album {
     static constraints = {
 		name blank:false
     }
+	
+	public Album(String name, Membre owner) {
+		this.name = name
+		this.owner = owner
+	}
 }
